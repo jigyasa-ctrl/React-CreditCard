@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: rgb(204, 200, 200);;
 }
+.App{
+  display: flex;
+  justify-content: center;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  align-self: center;
+}
+.creditcard{
+  position: absolute;
+  top:30px;
+  height:250px;
+  width:400px;
+  border-radius: 20px;;
+  padding:30px;
+  display: flex;
+  justify-content: center;
+  color:white;
+  align-items: left;
+  perspective: 1000px;
+  flex-direction: column;
+  background-image: url('./assets/image1.jpg');
+  background-position: cover;
+  background-size: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 15px grey;
+ 
+}
+.back{
+  position: absolute;
+  transform: rotateY(180deg);
+  visibility:hidden;
+}
+.back> input{
+  width:25vw;
+ 
+}
+.cvv{
+  width:25vw;
+  text-align: right;
+  background-color: rgb(0,0,0,0.8);
+  padding:10px;
+
+}
+.back>span{
+  height:220px;
+  width:300px;
+}
+.credit{
+  transform: rotateY(180deg) perspective(2500px);
+  transition: transform 1s linear;
+}
+.credit2{
+  transform: rotateY(360deg) perspective(2500px);
+  transition: transform 1s linear;
+}
+form{
+margin:80px;
+padding-top:250px;
+padding-bottom:20px;
+padding-right:50px;
+padding-left:50px;
+border-radius: 20px;;
+background-color: white;
+box-shadow: 5px 5px 8px grey;
+}
+button{
+  width:70vh;
+  height:35px;
+  margin-top:20px;
+  font-size: 20px;
+  background-color: rgb(76, 76, 219);
+  color:white;
+  border:0px;
+  outline:none;
+  margin-left:10px;
+  margin-right:10px;
+}
+.text{
+  font-size: 28px;
+  
+  margin:10px;
+  font-family: 'Courier Prime', monospace;;
+}
+.text1{
+  font-size: 22px;
+  padding:5px;
+  text-transform: uppercase;
+  font-family: 'Courier Prime', monospace;;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  ;
+  align-items: left;
+}
+.flex{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding:10px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  height:30px;
 }
